@@ -11,3 +11,7 @@ Type `npm i` to install
 ### Start project with:
 
 `npm run start:frontend`
+
+### Open app in web browser using below link
+
+http://localhost:9000/
