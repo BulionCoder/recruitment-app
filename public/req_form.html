@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Request ID</title>
+    <link rel="stylesheet" href="styles.css" type=text/css>
+    <script type="text/javascript" src="req_form.js"></script>
+    <script type="text/javascript" src="submition.js"></script>
+</head>
+
+<body>
+    <h1>Request ID</h1>
+    <div>
+        <form>
+            <div>
+                <label class="fieldCaption" for="req_name">Request name*</label><br />
+                <textarea name="req_name" id="req_name" rows="2" cols="50" maxlength=255 autofocus></textarea></br>
+                <p class="note">No more then 255 characters</p>
+            </div>
+
+            <div>
+                <label class="fieldCaption" for="requestor">Requestor*</label></br>
+                <select id="requestor" name="requestor">
+                    <!-- <option value="option2fromJSon">option2fromJSon</option>
+                    <option value="option3fromJSon">option3fromJSon</option> -->
+                </select><br />
+            </div>
+
+
+            <label class="fieldCaption" for="ending">Good ending*</label><br />
+            <input type="radio" id="yes" name="ending" value="yes">
+            <label for="yes">Yes</label>
+            <input type="radio" id="no" name="ending" value="no">
+            <label for="no">No</label>
+            <input type="radio" id="depends" name="ending" value="depends">
+            <label for="depends">Depends</label></br>
+
+            <label class="fieldCaption" for="desc">Descripion*</label></br>
+            <textarea name="desc" id="desc" rows="2" cols="50"
+                onfocusout="minCharacters(250, document.getElementById('desc'))"></textarea></br>
+            <p class="note">No spoilers please (minimum 250 characters)</p>
+
+            <input type="checkbox" id="need_storyteller" name="need_storyteller" value="yes"
+                onclick="showStoryteller()">
+            <label class="fieldCaption" for="need_storyteller">Need storyteller</label></br>
+            <div id="storytellerDiv" style="display:none">
+                <label class="fieldCaption" for="storyteller">Storyteller*</label></br>
+                <textarea name="storyteller" id="storyteller" rows="2" cols="50"></textarea></br>
+            </div>
+            <label class="fieldCaption" for="characters">Wanted Characters</label></br>
+            <select name="characters" size="4" id="characters" multiple>
+                <!-- <option value="1">Character 1</option>
+                <option value="2">Character 2</option>
+                <option value="3">Character 3</option>
+                <option value="4">Character 4</option> -->
+            </select></br>
+
+            <label class="fieldCaption" for="deadline">Deadline</label></br>
+            <input type="date" id="deadline" name="deadline" min="2000-01-02"></br>
+
+            <label class="fieldCaption" for="budget">Budget* (In Fable Dollars (FBD))</label></br>
+            <input type="number" id="budget" name="budget" min="250000"
+                onfocusout="minBudget(250000, document.getElementById('budget'))"></br>
+            <p class="note">No less than 250 000</p>
+
+            <input type="hidden" id="status" name="status" />
+            <input type="hidden" id="reqId" name="reqId" />
+
+            <div style="margin-top: 25px;">
+                <button type="reset" class="buttonBlack" onClick="location.href = 'index.html'">Cancel</button>
+                <!-- <button class="buttonBlack" onClick="location.href = 'index.html'">
+                    <span class="icon">Save as draft</span>
+                </button> -->
+                <button type="submit" class="buttonBlack">Submit</button>
+                <button type="button" id="deleteButton" class="buttonBlack disabled">Delete</button>
+
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

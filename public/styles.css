@@ -1,0 +1,76 @@
+.buttonBlack {
+  background-color: rgb(0, 0, 0);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.buttonSearch {
+  padding: 5px 10px;
+}
+
+.fieldCaption {
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+textarea {
+  width: 60%;
+  padding: 5px 5px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+select {
+  width: 80%;
+  padding: 5px 5px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body, html{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.email {
+  color: grey;
+}
+
+table .header {
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #e3e4e8;
+}
+
+tr:nth-child(odd) {
+  background-color: #fff;
+}
+#req-table {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#req-table tr:not(.header):hover {
+  background-color: #e3e4e8;
+}
+
+#req-table td {
+  vertical-align: top;
+  padding: 5px;
+}
+.note{
+  margin-top: 3px;
+  font-size: small;
+}
+
+.disabled {
+  opacity: 0.5;
+}
